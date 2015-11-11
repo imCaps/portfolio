@@ -1,0 +1,37 @@
+<!doctype html>
+<html ng-app="sportEventTest">
+<head>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular.min.js"></script>
+    <script src="//angular-ui.github.io/bootstrap/ui-bootstrap-tpls-0.13.4.js"></script>
+
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/2.5.1/less.min.js"></script>
+    <script type="text/javascript" src="script.js"></script>
+    <link rel="stylesheet/less" type="text/css" href="style.less" />
+    <script src="less.min.js" type="text/javascript"></script>
+</head>
+<body>
+    <div ng-controller="AthletesListController" class="container">
+        <h2>Athletes</h2>
+        <alert ng-repeat="alert in errorMessages" type="{{alert.type}}">{{alert.msg}}</alert>
+        <table class="table">
+            <thead>
+            <tr>
+                <th>start number</th>
+                <th>full name</th>
+                <th>Final corridor</th>
+                <th>Finish line</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr ng-repeat="row in athletesCollection">
+                <td>{{row.start_number}}</td>
+                <td>{{row.full_name}}</td>
+                <th><label class="btn btn-primary" ng-click="enterFinalCorridor(row.chip_id)">Enter</label></th>
+                <th><label class="btn btn-success" ng-click="crossFinishLine(row.chip_id)">Cross</label></th>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
