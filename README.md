@@ -1,4 +1,4 @@
-# portfolio
+# some things
 
 1. Sport event project is a little api service with frontend side. Uses Slim framework for api, AngularJS for frontend.
 
