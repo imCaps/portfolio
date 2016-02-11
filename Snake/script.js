@@ -2,7 +2,6 @@
  * Created by alexandrshumilow on 27/09/15.
  */
 
-
 // Field const
 const CELL_SIZE = 10, COLS = 60, ROWS = 50;
 const AREA_WIDTH = CELL_SIZE * COLS, AREA_HEIGHT = CELL_SIZE * ROWS;

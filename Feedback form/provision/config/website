@@ -1,0 +1,41 @@
+server {
+    listen 80;
+    server_name barona.dev;
+
+    root /var/www/src;
+    index index.php index.html;
+
+    # Important for VirtualBox
+    sendfile off;
+    error_log  /var/log/nginx/error.log;
+
+    location / {
+        try_files $uri $uri/ /index.php$is_args$args;
+    }
+
+    location /pmants {
+        root /var/www/;
+        index index.php index.html index.htm;
+        location ~ ^/pmants/(.+\.php)$ {
+                try_files $uri =404;
+                root /var/www/;
+                fastcgi_pass unix:/var/run/php5-fpm.sock;
+                fastcgi_index index.php;
+                fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
+                include /etc/nginx/fastcgi_params;
+        }
+
+        location ~* ^/pmants/(.+\.(jpg|jpeg|gif|css|png|js|ico|html|xml|txt))$ {
+                root /var/www/;
+        }
+    }
+    location ~* \.php {
+        include fastcgi_params;
+
+        fastcgi_pass unix:/var/run/php5-fpm.sock;
+
+        fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
+        fastcgi_cache off;
+        fastcgi_index index.php;
+    }
+}
