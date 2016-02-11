@@ -1,0 +1,20 @@
+
+div {
+    display: block;
+    padding: 0;
+    margin: 0;
+}
+
+.gameBoard {position: relative;}
+.gameStats {
+    width: 100%;
+    float: left;
+    margin-bottom: 10px;
+ }
+.gameField {float: left;}
+.gameArea {
+    outline: thick solid rgba(0, 92, 91, 0.71);
+    background-color: rgba(23, 23, 23, 0.89);
+
+}
+.message {position: absolute; color: lightskyblue}

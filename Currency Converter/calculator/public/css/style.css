@@ -1,0 +1,26 @@
+.container {
+    padding: 40px;
+}
+p {
+    font-size: 12px;
+}
+.calculator-form {
+    margin-top: 50px;
+}
+.exchange-rates {
+    margin-bottom: 100px;
+}
+.error {
+    border-color: #ba2312;
+}
+.exchange-results, .form-error, .converting-label {
+    display: none;
+}
+.result-label,.bank-name {
+    margin-right: 10px;
+    font-weight: bold;
+}
+.exchange-results {
+    margin-top: 30px;
+}
+
