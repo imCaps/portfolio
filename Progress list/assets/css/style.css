@@ -1,0 +1,72 @@
+html, body {
+    font-family: "Lucida Console", Monaco, monospace;
+    font-weight: 300;
+    color: #6d6e71;
+    font-size: 16px;
+    line-height: 20px;
+}
+ul.progress-tracking-list {
+    counter-reset: step;
+}
+ul.progress-tracking-list li {
+    list-style-type: none;
+}
+ul.progress-tracking-list li span{
+    margin: 5px 0 0 10px;
+}
+ul.progress-tracking-list li.active span{
+    margin: 5px 0 0 10px;
+    color: #3EB555;
+}
+ul.progress-tracking-list li:before {
+    content: counter(step);
+    counter-increment: step;
+    line-height: 60px;
+    display: inline-block;
+    font-size: 13px;
+    color: white;
+    background: url(../img/progress-tracking-item.png) no-repeat 0px 0px;
+    background-size: 30px;
+    width: 30px;
+    padding: 19px 0 0 11.5px;
+    margin-top: 0px;
+    margin-bottom: -21px;
+}
+ul.progress-tracking-list li.first:before {
+    content: counter(step);
+    counter-increment: step;
+    line-height: 30px;
+    display: inline-block;
+    font-size: 13px;
+    color: white;
+    background: url(../img/progress-tracking-first-item.png) no-repeat 0 14px;
+    background-size: 30px;
+    padding: 13px 0 0 11px;
+    margin-bottom: -5px;
+}
+ul.progress-tracking-list li.active:before {
+    content: counter(step);
+    counter-increment: step;
+    line-height: 60px;
+    display: inline-block;
+    font-size: 13px;
+    color: white;
+    background: url(../img/progress-tracking-item-checked.png) no-repeat 0px 0px;
+    background-size: 30px;
+    width: 30px;
+    padding: 17px 0 0 11.5px;
+    margin-top: 0px;
+    margin-bottom: -20px;
+}
+ul.progress-tracking-list li.active.first:before {
+    content: counter(step);
+    counter-increment: step;
+    line-height: 30px;
+    display: inline-block;
+    font-size: 13px;
+    color: white;
+    background: url(../img/progress-tracking-first-item-checked.png) no-repeat 0 13px;
+    background-size: 30px;
+    padding: 13px 0 0 11px;
+    margin-bottom: -6px;
+}
