@@ -20,7 +20,23 @@
           <option name="port" value="22" />
         </fileTransfer>
       </webServer>
-      <webServer id="a0b751dd-df5a-4b09-8e84-6acabb91a0fe" name="My Little Pony" url="http://46.101.212.23">
+      <webServer id="a0b751dd-df5a-4b09-8e84-6acabb91a0fe" name="My Little Pony (1)" url="http://46.101.212.23">
+        <fileTransfer host="46.101.212.23" port="22" privateKey="$USER_HOME$/.ssh/id_rsa" accessType="SFTP" keyPair="true">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" shareSSLContext="true" />
+          </advancedOptions>
+          <option name="port" value="22" />
+        </fileTransfer>
+      </webServer>
+      <webServer id="09100490-f7ca-4c9f-9109-231a44f07cdf" name="My Little Pony" url="http://46.101.212.23">
+        <fileTransfer host="46.101.212.23" port="22" privateKey="$USER_HOME$/.ssh/id_rsa" accessType="SFTP" keyPair="true">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" shareSSLContext="true" />
+          </advancedOptions>
+          <option name="port" value="22" />
+        </fileTransfer>
+      </webServer>
+      <webServer id="f3cabbcd-76d9-4202-93cc-3b3db55854c6" name="My Little Pony" url="http://46.101.212.23">
         <fileTransfer host="46.101.212.23" port="22" privateKey="$USER_HOME$/.ssh/id_rsa" accessType="SFTP" keyPair="true">
           <advancedOptions>
             <advancedOptions dataProtectionLevel="Private" shareSSLContext="true" />
